@@ -1,0 +1,103 @@
+body {
+  background-color: #263854;
+  color: white;
+}
+
+.home {
+  font-family: "Bebas Neue", cursive;
+  font-size: 25px;
+  letter-spacing: 1px;
+  height: 35px;
+  width: 60px;
+  margin-left: 20px;
+  margin-top: 10px;
+  border-radius: 15%;
+  color: #263854;
+  background-color: white;
+  justify-content: center;
+}
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Bebas Neue", cursive;
+  font-size: 40px;
+  letter-spacing: 1px;
+}
+p,
+a,
+li {
+  font-family: "Nunito", sans-serif;
+  font-weight: 200;
+  font-size: 25px;
+  margin-left: 100px;
+  letter-spacing: 1px;
+  margin-right: 100px;
+}
+.center {
+  text-align: center;
+  margin-top: 30px;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  background-color: transparent;
+  padding: 0px;
+  margin-right: 40px;
+  margin-left: 40px;
+  margin-top: 40px;
+  justify-content: center;
+  align-items: center;
+}
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid white;
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+  height: 50px;
+  width: 50px;
+}
+.image {
+  margin: 0px;
+  padding: 0px;
+  width: 300px;
+  height: 300px;
+  transition:transform 0.25s ease;
+}
+.image:hover{
+    background-color: gray;
+
+    color: #424242; 
+  -webkit-transition: all .3s ease-in;
+  -moz-transition: all .3s ease-in;
+  -ms-transition: all .3s ease-in;
+  -o-transition: all .3s ease-in;
+  transition: all .3s ease-in;
+  opacity: 1;
+  transform: scale(1.15);
+  -webkit-transform: scale(1.15); /* Safari and Chrome */
+
+}
+@media screen and (max-width: 1024px) {
+  .image-grid {
+    --num-cols: 2;
+    --row-height: 200px;
+  }
+}
+.wrapper{
+    position: relative; 
+    z-index: 1;
+    width: 100vw;
+    height: 100vh;
+}
+
+.light-box{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #ccc;
+    width: 100vw;
+    height: 100vh;
+    visibility: hidden;
+}
