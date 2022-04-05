@@ -44,20 +44,26 @@ body {
 .grid-container {
   /*needs to be flex to move*/
   display: flex;
-  grid-template-columns: 1fr 1fr;
   background-color: inherit;
   padding: 0px;
+  height:90vh;
   margin-right: 60px;
   margin-left: 60px;
   margin-top: 40px;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   text-align: center;
   transition: 200ms ease-in-out;
+  background: red;
+  flex-flow: row nowrap;
+  flex-basis:20%;
 }
 .map {
+  margin: 10px;
+  width:20%;
   display: flex;
   border: none;
+
 }
 .grid-item {
   background-color: rgba(255, 255, 255, 0.8);
@@ -65,15 +71,16 @@ body {
   font-size: 30px;
   text-align: center;
   justify-content: center;
-  height: 50px;
-  width: 50px;
+  margin: 10px;
+  display: flex;
 }
 .image {
+  width: 350px;
   margin: 0px;
   padding: 10px;
-  width: 400px;
-  height: auto;
   pointer-events: none;
+display: flex;
+
 }
 .map-button {
   border: none;
@@ -209,14 +216,16 @@ a:active {
 @media screen and (max-width: 900px) {
   .grid-container {
     display: flex;
+    flex-direction: column;
     text-align: center;
     align-items: center;
     margin: auto;
     justify-content: center;
-    flex-direction: column;
     transition: 200ms ease-in-out;
+   
   }
 
+}
   h1,
   h2,
   h3,
@@ -241,5 +250,15 @@ a:active {
     margin-left: 5%;
     margin-right: 5%;
     text-align: center;
+  }
+
+
+@media screen and (width: 1500px) {
+  .title,
+  .info,
+  li,
+  body {
+    margin-left: 0%;
+    margin-right: 0%;
   }
 }
