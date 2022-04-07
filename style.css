@@ -36,51 +36,31 @@ body {
   font-family: "Bebas Neue", sans-serif;
   font-size: 3.5vh;
   letter-spacing: 2px;
-  margin-top: -10px;
-  margin-bottom: -10px;
+  margin-bottom: 10px;
   text-align: center;
-  transition: 200ms ease-in-out;
 }
 .grid-container {
-  /*needs to be flex to move*/
+  /*needs to be flex to move and be careful with changes dummy*/
   display: flex;
-  background-color: inherit;
-  padding: 0px;
-  height:90vh;
+  position:relative;
+  height:fit-content;
   margin-right: 60px;
   margin-left: 60px;
-  margin-top: 40px;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   text-align: center;
-  transition: 200ms ease-in-out;
-  background: red;
-  flex-flow: row nowrap;
-  flex-basis:20%;
+  flex-direction: row;
+  align-content:flex-start;
+  flex-shrink: 0;
+  flex-flow: row wrap;
+  align-items: flex-end;
 }
-.map {
-  margin: 10px;
-  width:20%;
-  display: flex;
-  border: none;
 
-}
-.grid-item {
-  background-color: rgba(255, 255, 255, 0.8);
-  padding: 20px;
-  font-size: 30px;
-  text-align: center;
-  justify-content: center;
-  margin: 10px;
-  display: flex;
-}
 .image {
   width: 350px;
-  margin: 0px;
-  padding: 10px;
   pointer-events: none;
-display: flex;
-
+  text-align: center;
+  align-items: center;
 }
 .map-button {
   border: none;
@@ -100,7 +80,6 @@ display: flex;
   height: fit-content;
   padding: 30px;
   max-width: 90%;
-  transition: 200ms ease-in-out;
   max-height: 80%;
   overflow: scroll;
 }
@@ -119,9 +98,7 @@ display: flex;
   color: #263854;
   font-family: "Bebas Neue", sans-serif;
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+  inset:0;
   padding: 10px;
   display: block;
 }
@@ -145,13 +122,9 @@ display: flex;
 #overlay {
   position: fixed;
   opacity: 0;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  inset:0;
   background-color: rgba(0, 0, 0, 0.5);
   pointer-events: none;
-  transition: 200ms ease-in-out;
 }
 
 #overlay.active {
@@ -164,11 +137,6 @@ display: flex;
   background-color: inherit;
   border: none;
   padding: 1em;
-  text-align: center;
-  height: 100%;
-  width: 100%;
-  object-fit: contain;
-  display: flex;
 }
 #close {
   background-color: #263854;
@@ -199,20 +167,11 @@ display: flex;
   bottom: 0;
   left: 0;
   right: 0;
+}
+a:any-link{ color:#263854;
   text-decoration: none;
 }
-a:link {
-  text-decoration: none;
-}
-a:visited {
-  text-decoration: none;
-}
-a:hover {
-  text-decoration: none;
-}
-a:active {
-  text-decoration: none;
-}
+
 @media screen and (max-width: 900px) {
   .grid-container {
     display: flex;
@@ -221,17 +180,13 @@ a:active {
     align-items: center;
     margin: auto;
     justify-content: center;
-    transition: 200ms ease-in-out;
-   
+    flex-flow: column;
   }
-
-}
   h1,
   h2,
   h3,
   h4,
   .title {
-    transition: 200ms ease-in-out;
     letter-spacing: 1px;
     font-size: 5vh;
     margin-left: 20px;
@@ -240,25 +195,13 @@ a:active {
   }
   .sectiontitle {
     font-size: 2.5vh;
-    transition: 200ms ease-in-out;
   }
   .info a,
   li,
   body {
-    transition: 200ms ease-in-out;
     letter-spacing: 1px;
     margin-left: 5%;
     margin-right: 5%;
     text-align: center;
-  }
-
-
-@media screen and (width: 1500px) {
-  .title,
-  .info,
-  li,
-  body {
-    margin-left: 0%;
-    margin-right: 0%;
   }
 }
